@@ -5,9 +5,9 @@ def play():
     game_view = GameView()
     game_model = GameModel()
 
-    game_model.observe(game_view)
-    game_model.snake.observe(game_view.snake)
-    game_model.food.observe(game_view.food)
+    game_model.add_observer(game_view)
+    game_model.snake.add_observer(game_view.snake)
+    game_model.food.add_observer(game_view.food)
     return game_model.run()
 
 
