@@ -71,7 +71,7 @@ class GameModel(Observable):
             self.event_handler()
             self.update()
             clock.tick(10)
+        return self.snake.length
 
     def game_over(self):
         self.is_running = False
-        print(f"Score: {self.snake.length}")
